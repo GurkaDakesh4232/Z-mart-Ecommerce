@@ -1,0 +1,56 @@
+{% extends 'nav.html' %}
+{% block title %}
+Dakesh Login
+{% endblock title %}
+{% block body %}  
+<section id="contact" class="contact section">
+    <div class="container section-title" data-aos="fade-up">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <form action="/drkauth/login/" method="post">{% csrf_token%}
+                    <div class="col-12">
+                        
+                        
+                        <h1 data-aos="fade-up" class="text-center mb-3">Login</h1>
+
+                        {% for meaasage in messages%}
+                        <div class="alert alert-{{meaasage.tags}} alert-dismissible fade show" role="alert">
+                            <strong></strong>{{meaasage}}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                          </div>
+                        {%endfor%}
+                        
+                        <div class="form-floating mb-2">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" required>
+                            <label for="email" class="form-label">Email</label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-floating mb-2">
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
+                            <label for="password" class="form-label">Password</label>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12">
+                        <div class="d-grid">
+                            <button class="btn btn-primary btn-lg" type="submit">Login</button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <div class="text-center">
+                            <p class="m-0 text-secondary">Not a User? <a href="/drkauth/signup/" class="link-primary text-decoration-none">Sign Up</a>
+                               <br> Forget Password-<a href="/drkauth/request-reset-email/" class="link-primary text-decoration-none">Reset</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock body %}

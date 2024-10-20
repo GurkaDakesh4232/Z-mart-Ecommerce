@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% extends 'nav.html' %}
+{% block title %}
+About
+{% endblock title %}
+{% block body %}  
+
+<html lang="en">
+<head>
+{% load static%}
+</head>
+
+<body>
+    
+    <!-- Team Section -->
+    <section class="team-section bg-primary text-white text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-heading text-uppercase">About Us</h2>
+                    <p class="text-muted">Web Developer with expertise in building
+                         responsive websites and applications using HTML, CSS, and 
+                         JavaScript. Passionate about creating user-friendly interfaces 
+                         and optimizing web performance.
+
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+               
+                <!-- Team Member 2 -->
+<div class="d-flex justify-content-center">
+    <div class="team-member text-center">
+        <img class="mx-auto rounded-circle" src="{% static 'assets/img/dakesh.jpg'%}" alt=""  style="width: 150px; height: 150px;">
+        <h4>D@kesh yadav</h4>
+        <p class="text-muted">Web Developer</p>
+       
+    </div>
+</div>
+
+
+               
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>
+{% endblock body %} 

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Tracker - Zmart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f7f7f7;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .tracker-container {
+            margin-top: 50px;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .tracker-header {
+            font-size: 30px;
+            font-weight: bold;
+            color: #2e8b57;
+            text-align: center;
+        }
+
+        .form-label {
+            font-weight: bold;
+        }
+
+        .track-status {
+            background-color: #e9f7ef;
+            padding: 20px;
+            border-radius: 8px;
+            color: #155724;
+            margin-top: 20px;
+        }
+
+        .btn-track {
+            background-color: #a624b1;
+            color: white;
+            font-size: 18px;
+        }
+
+        .btn-track:hover {
+            background-color: #87079e;
+        }
+        .btn-back-to-home {
+            background-color: #ff7b00;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="tracker-container">
+            <!-- Tracker Header -->
+            <h1 class="tracker-header">Track Your Order</h1>
+            <p class="text-center text-muted">Enter your Order Number or Tracking ID below to get the status of your order.</p>
+
+            <!-- Tracker Form -->
+            <form id="trackForm">
+                <div class="mb-3">
+                    <label for="trackingID" class="form-label">Order Number or Tracking ID</label>
+                    <input type="text" class="form-control" id="trackingID" placeholder="Enter your order number or tracking ID" required>
+                </div>
+                <button type="submit" class="btn btn-track w-100">Track Order</button>
+            </form>
+
+            <!-- Status Box (Example for when status is fetched) -->
+            <div class="track-status mt-4 d-none" id="orderStatus">
+                <h4>Order Status: <span class="text-success">In Transit</span></h4>
+                <p>Estimated Delivery: <strong>within 10min</strong></p>
+                <p>Current Location: <strong>Near to you</strong></p>
+            </div>
+            <div class="d-flex justify-content-center">
+                <a href="/" class="btn btn-back-to-home mt-4">Back to Home</a>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and optional JavaScript to handle tracking (For illustration only) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Example JavaScript for handling form submission and showing the status
+        document.getElementById('trackForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Simulate fetching order status
+            var orderStatus = document.getElementById('orderStatus');
+            orderStatus.classList.remove('d-none');  // Show the status box
+        });
+    </script>
+</body>
+</html>

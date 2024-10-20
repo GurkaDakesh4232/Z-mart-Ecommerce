@@ -1,0 +1,9 @@
+{% autoescape off %}
+    Activate Your Account
+
+    Hi {{ user.email }},
+    Please click the link below to activate your account:
+    "{{ activation_link }}" 
+    If you didn’t request this, please ignore this email.
+    {% endautoescape %}
+
